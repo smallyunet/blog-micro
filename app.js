@@ -242,7 +242,28 @@ function handleLocationChange() {
   }
 }
 
+function initMenuToggle() {
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("nav-menu");
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+    menu.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (menu.classList.contains("open") && !menu.contains(e.target) && e.target !== toggle) {
+      toggle.setAttribute("aria-expanded", "false");
+      menu.classList.remove("open");
+    }
+  });
+}
+
 window.addEventListener("popstate", handleLocationChange);
 window.addEventListener("hashchange", handleLocationChange);
 
+initMenuToggle();
 init();
