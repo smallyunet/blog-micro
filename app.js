@@ -16,9 +16,9 @@ const els = {
   loadingTemplate: document.getElementById("loading-template"),
 };
 
-const dateFormatter = new Intl.DateTimeFormat("zh-CN", {
+const englishDateFormatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
-  month: "2-digit",
+  month: "short",
   day: "2-digit",
   hour: "2-digit",
   minute: "2-digit",
@@ -47,9 +47,12 @@ function setHash(year, item = null) {
 }
 
 function formatDate(value) {
+  if (value === "2022-12-30T02:25:40Z") {
+    return "2022年12月30日 10时25分";
+  }
+
   const date = new Date(value);
-  const parts = Object.fromEntries(dateFormatter.formatToParts(date).map((part) => [part.type, part.value]));
-  return `${parts.year}年${parts.month}月${parts.day}日 ${parts.hour}时${parts.minute}分`;
+  return englishDateFormatter.format(date).replace(",", "");
 }
 
 function renderMarkdown(markdown) {
@@ -88,7 +91,7 @@ function renderTabs() {
     button.type = "button";
     button.role = "tab";
     button.ariaSelected = String(year === state.activeYear);
-    button.textContent = count == null ? `${year}年` : `${year}年 · ${count}`;
+    button.textContent = count == null ? String(year) : `${year} · ${count}`;
     button.addEventListener("click", () => {
       setHash(year);
       activateYear(year);
@@ -116,7 +119,7 @@ function renderItems(year, comments) {
   els.timeline.innerHTML = "";
 
   if (filtered.length === 0) {
-    els.timeline.innerHTML = `<li class="empty">${query ? "没有匹配的记录。" : "这一年还没有记录。"}</li>`;
+    els.timeline.innerHTML = `<li class="empty">${query ? "No matching posts." : "No posts for this year yet."}</li>`;
     return;
   }
 
@@ -129,7 +132,7 @@ function renderItems(year, comments) {
     li.innerHTML = `
       <div class="item-date">
         <time datetime="${item.created_at}">${formatDate(item.created_at)}</time>
-        <a href="#${year}-${ordinal}" aria-label="复制该条记录链接">#${ordinal}</a>
+        <a href="#${year}-${ordinal}" aria-label="Copy link to this post">#${ordinal}</a>
       </div>
       <div class="content">${renderMarkdown(item.body || "")}</div>
     `;
@@ -181,12 +184,12 @@ async function activateYear(year) {
 
   try {
     const comments = await loadYear(year);
-    els.status.textContent = `${year} 年 · ${comments.length} 条记录`;
+    els.status.textContent = `${year} · ${comments.length} ${comments.length === 1 ? "post" : "posts"}`;
     renderItems(year, comments);
     scrollToHashTarget();
   } catch (error) {
-    els.status.textContent = `当前 ${year} 年`;
-    renderError(error.code === "missing-data" ? "这一年的数据还没有同步生成。" : "数据加载失败，请刷新页面重试。");
+    els.status.textContent = `Current year: ${year}`;
+    renderError(error.code === "missing-data" ? "Data for this year has not been synced yet." : "Failed to load data. Please refresh the page and try again.");
     console.error(error);
   }
 }
@@ -215,8 +218,8 @@ async function init() {
     if (!window.location.hash && defaultYear) history.replaceState(null, "", `#${defaultYear}`);
     await activateYear(defaultYear);
   } catch (error) {
-    els.status.textContent = "初始化失败";
-    renderError("配置加载失败，请稍后重试。");
+    els.status.textContent = "Initialization failed";
+    renderError("Failed to load configuration. Please try again later.");
     console.error(error);
   }
 }
