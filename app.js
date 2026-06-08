@@ -15,11 +15,11 @@ const els = {
   loadingTemplate: document.getElementById("loading-template"),
 };
 
-const englishDateFormatter = new Intl.DateTimeFormat("en-US", {
+const chineseDateFormatter = new Intl.DateTimeFormat("zh-CN", {
   year: "numeric",
-  month: "short",
-  day: "2-digit",
-  hour: "2-digit",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
   minute: "2-digit",
   hour12: false,
   timeZone: "Asia/Shanghai",
@@ -47,7 +47,10 @@ function formatDate(value) {
   }
 
   const date = new Date(value);
-  return englishDateFormatter.format(date).replace(",", "");
+  const parts = Object.fromEntries(
+    chineseDateFormatter.formatToParts(date).map((part) => [part.type, part.value]),
+  );
+  return `${parts.year}年${parts.month}月${parts.day}日 ${parts.hour}时${parts.minute}分`;
 }
 
 function renderMarkdown(markdown) {
