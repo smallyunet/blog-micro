@@ -11,7 +11,6 @@ const els = {
   tabs: document.getElementById("year-tabs"),
   timeline: document.getElementById("timeline"),
   status: document.getElementById("status-text"),
-  issueLink: document.getElementById("issue-link"),
   total: document.getElementById("total-count"),
   loadingTemplate: document.getElementById("loading-template"),
 };
@@ -28,10 +27,6 @@ const englishDateFormatter = new Intl.DateTimeFormat("en-US", {
 
 const legacySiteOrigin = "https://crazy.smallyu.net";
 let markdownConfigured = false;
-
-function issueUrl(source) {
-  return `https://github.com/${source.owner}/${source.repo}/issues/${source.issue}`;
-}
 
 function normalizeHash() {
   const hash = decodeURIComponent(window.location.hash.replace(/^#/, ""));
@@ -84,7 +79,6 @@ function renderMarkdown(markdown) {
 function renderTabs() {
   els.tabs.innerHTML = "";
   for (const year of state.years) {
-    const source = state.sources.find((item) => item.year === year);
     const count = state.manifest?.years?.find((item) => item.year === year)?.count;
     const button = document.createElement("button");
     button.className = "tab";
@@ -96,7 +90,6 @@ function renderTabs() {
       setHash(year);
       activateYear(year);
     });
-    button.title = source ? issueUrl(source) : "";
     els.tabs.append(button);
   }
 }
@@ -173,14 +166,6 @@ async function activateYear(year) {
   state.activeYear = year;
   renderTabs();
   renderLoading();
-
-  const source = state.sources.find((item) => item.year === year);
-  if (source) {
-    els.issueLink.hidden = false;
-    els.issueLink.href = issueUrl(source);
-  } else {
-    els.issueLink.hidden = true;
-  }
 
   try {
     const comments = await loadYear(year);
