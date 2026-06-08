@@ -133,8 +133,6 @@ async function main() {
   const event = await readEvent();
   const sources = config.sources || [];
   const changedYears = [];
-  const previousManifest = await readJson(manifestPath).catch(() => null);
-  let fetchedAny = false;
 
   for (const source of sources) {
     const output = new URL(`data/${source.year}.json`, root);
@@ -151,7 +149,6 @@ async function main() {
     let comments;
     try {
       comments = await fetchEntries(source);
-      fetchedAny = true;
     } catch (error) {
       if (isEventSource(source, event)) {
         throw error;
@@ -175,8 +172,6 @@ async function main() {
   }
 
   const manifest = {
-    updated_at: fetchedAny ? new Date().toISOString() : previousManifest?.updated_at ?? null,
-    last_checked_at: new Date().toISOString(),
     years: changedYears
       .map(({ year, count, issue_url }) => ({ year, count, issue_url }))
       .sort((a, b) => a.year - b.year),
