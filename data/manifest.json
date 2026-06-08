@@ -1,0 +1,36 @@
+{
+  "updated_at": null,
+  "last_checked_at": "2026-06-08T08:14:22.355Z",
+  "years": [
+    {
+      "year": 2020,
+      "count": 33,
+      "issue_url": "https://github.com/smallyunet/hexo-blog/issues/7"
+    },
+    {
+      "year": 2021,
+      "count": 113,
+      "issue_url": "https://github.com/smallyunet/hexo-blog/issues/10"
+    },
+    {
+      "year": 2022,
+      "count": 44,
+      "issue_url": "https://github.com/smallyunet/hexo-blog/issues/19"
+    },
+    {
+      "year": 2023,
+      "count": 36,
+      "issue_url": "https://github.com/smallyunet/hexo-blog/issues/29"
+    },
+    {
+      "year": 2024,
+      "count": 59,
+      "issue_url": "https://github.com/smallyunet/hexo-blog/issues/32"
+    },
+    {
+      "year": 2025,
+      "count": 14,
+      "issue_url": "https://github.com/smallyunet/hexo-blog/issues/35"
+    }
+  ]
+}

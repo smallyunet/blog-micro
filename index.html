@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="smallyu 的微博，使用 GitHub Issues 记录并自动同步。">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f8fa">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#11151c">
+    <title>smallyu 的微博</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./">smallyu 的微博</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="https://smallyu.net/">博客</a>
+        <a href="https://github.com/smallyunet/blog-micro">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="micro-blog" id="app">
+      <section class="toolbar" aria-label="Filter">
+        <div class="tabs" id="year-tabs" role="tablist" aria-label="Years"></div>
+        <label class="search">
+          <span class="sr-only">搜索</span>
+          <input id="search-input" type="search" placeholder="搜索内容" autocomplete="off">
+        </label>
+      </section>
+
+      <section class="status-line" aria-live="polite">
+        <span id="status-text">正在加载...</span>
+        <span class="status-actions">
+          <span class="total-meta">全部 <span id="total-count">-</span> 条</span>
+          <span class="status-divider" aria-hidden="true"></span>
+          <a id="issue-link" href="#" target="_blank" rel="noreferrer">当前年份 Issue</a>
+        </span>
+      </section>
+
+      <ol class="timeline" id="timeline" aria-live="polite"></ol>
+    </main>
+
+    <template id="loading-template">
+      <li class="loading">
+        <span></span>
+        <span></span>
+      </li>
+    </template>
+
+    <script src="./assets/vendor/marked.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "title": "smallyu 的微博",
+  "description": "Short notes synced from GitHub Issues.",
+  "sources": [
+    {
+      "year": 2020,
+      "owner": "smallyunet",
+      "repo": "hexo-blog",
+      "issue": 7
+    },
+    {
+      "year": 2021,
+      "owner": "smallyunet",
+      "repo": "hexo-blog",
+      "issue": 10
+    },
+    {
+      "year": 2022,
+      "owner": "smallyunet",
+      "repo": "hexo-blog",
+      "issue": 19
+    },
+    {
+      "year": 2023,
+      "owner": "smallyunet",
+      "repo": "hexo-blog",
+      "issue": 29
+    },
+    {
+      "year": 2024,
+      "owner": "smallyunet",
+      "repo": "hexo-blog",
+      "issue": 32
+    },
+    {
+      "year": 2025,
+      "owner": "smallyunet",
+      "repo": "hexo-blog",
+      "issue": 35
+    }
+  ]
+}
