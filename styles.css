@@ -8,6 +8,7 @@
   --color-border: #e2e6ea;
   --color-border-subtle: rgba(0, 0, 0, 0.06);
   --color-border-strong: #c0d3eb;
+  --color-timeline: #e1e7ef;
   --color-link: #2563eb;
   --color-link-hover: #1d4ed8;
   --color-link-visited: #1e40af;
@@ -212,6 +213,22 @@ a:visited {
   background: var(--surface-1);
   box-shadow: var(--shadow-card);
   scroll-margin-top: 76px;
+}
+
+.timeline-item::after {
+  position: absolute;
+  top: 0;
+  bottom: -41px;
+  left: 15px;
+  z-index: -1;
+  display: block;
+  width: 2px;
+  content: "";
+  background-color: var(--color-timeline);
+}
+
+.timeline-item:last-child::after {
+  display: none;
 }
 
 .timeline-item.highlight {
@@ -446,6 +463,7 @@ a:visited {
     --color-border: #2a2f37;
     --color-border-subtle: rgba(255, 255, 255, 0.08);
     --color-border-strong: #39506b;
+    --color-timeline: #293341;
     --color-quote-bg: #141a20;
     --color-quote-border: #2a2f37;
     --color-code-bg: #12161a;
