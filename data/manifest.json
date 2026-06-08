@@ -1,6 +1,6 @@
 {
   "updated_at": null,
-  "last_checked_at": "2026-06-08T08:14:22.355Z",
+  "last_checked_at": null,
   "years": [
     {
       "year": 2020,
@@ -31,6 +31,11 @@
       "year": 2025,
       "count": 14,
       "issue_url": "https://github.com/smallyunet/hexo-blog/issues/35"
+    },
+    {
+      "year": 2026,
+      "count": 0,
+      "issue_url": "https://github.com/smallyunet/blog-micro/issues/1"
     }
   ]
 }

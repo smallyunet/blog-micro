@@ -42,7 +42,8 @@
       "year": 2026,
       "owner": "smallyunet",
       "repo": "blog-micro",
-      "issue": 1
+      "issue": 1,
+      "include_issue_body": true
     }
   ]
 }

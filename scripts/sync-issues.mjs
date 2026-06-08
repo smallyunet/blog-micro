@@ -34,6 +34,14 @@ function shouldSyncSource(source, event) {
   return owner === source.owner && repo === source.repo && issue === source.issue;
 }
 
+function isEventSource(source, event) {
+  if (!event || !["issue_comment", "issues"].includes(eventName)) return false;
+  const repo = event.repository?.name;
+  const owner = event.repository?.owner?.login;
+  const issue = event.issue?.number;
+  return owner === source.owner && repo === source.repo && issue === source.issue;
+}
+
 async function fetchComments(source, page = 1, collected = []) {
   const url = new URL(`https://api.github.com/repos/${source.owner}/${source.repo}/issues/${source.issue}/comments`);
   url.searchParams.set("per_page", "100");
@@ -56,6 +64,49 @@ async function fetchComments(source, page = 1, collected = []) {
   const next = collected.concat(comments);
   if (comments.length < 100) return next;
   return fetchComments(source, page + 1, next);
+}
+
+async function fetchIssue(source) {
+  const headers = {
+    Accept: "application/vnd.github+json",
+    "User-Agent": "blog-micro-sync",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
+  if (token) headers.Authorization = `Bearer ${token}`;
+
+  const response = await fetch(`https://api.github.com/repos/${source.owner}/${source.repo}/issues/${source.issue}`, { headers });
+  if (!response.ok) {
+    const body = await response.text();
+    throw new Error(`GitHub API ${response.status} for issue ${source.owner}/${source.repo}#${source.issue}: ${body}`);
+  }
+
+  return response.json();
+}
+
+async function fetchEntries(source) {
+  const comments = await fetchComments(source);
+  if (!source.include_issue_body) return comments;
+
+  const issue = await fetchIssue(source);
+  if (!issue.body || !issue.body.trim()) return comments;
+
+  const issueEntry = {
+    url: issue.url,
+    html_url: issue.html_url,
+    issue_url: issue.url,
+    id: issue.id,
+    node_id: issue.node_id,
+    user: issue.user,
+    created_at: issue.created_at,
+    updated_at: issue.updated_at,
+    author_association: issue.author_association,
+    body: issue.body,
+    reactions: issue.reactions,
+    performed_via_github_app: null,
+    source_type: "issue_body",
+  };
+
+  return [issueEntry, ...comments];
 }
 
 async function existingCount(year) {
@@ -99,9 +150,13 @@ async function main() {
 
     let comments;
     try {
-      comments = await fetchComments(source);
+      comments = await fetchEntries(source);
       fetchedAny = true;
     } catch (error) {
+      if (isEventSource(source, event)) {
+        throw error;
+      }
+
       const fallback = await existingComments(source.year);
       if (!fallback) throw error;
       comments = fallback;

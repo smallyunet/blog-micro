@@ -154,6 +154,11 @@ async function loadYear(year) {
   if (state.loaded.has(year)) return state.loaded.get(year);
 
   const response = await fetch(`./data/${year}.json`, { cache: "no-cache" });
+  if (response.status === 404) {
+    const error = new Error(`Missing data file for ${year}`);
+    error.code = "missing-data";
+    throw error;
+  }
   if (!response.ok) throw new Error(`Failed to load ${year}.json`);
   const comments = await response.json();
   comments.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
@@ -181,7 +186,7 @@ async function activateYear(year) {
     scrollToHashTarget();
   } catch (error) {
     els.status.textContent = `当前 ${year} 年`;
-    renderError("数据加载失败，请刷新页面重试。");
+    renderError(error.code === "missing-data" ? "这一年的数据还没有同步生成。" : "数据加载失败，请刷新页面重试。");
     console.error(error);
   }
 }

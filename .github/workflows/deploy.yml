@@ -9,6 +9,10 @@ on:
       - created
       - edited
       - deleted
+  issues:
+    types:
+      - opened
+      - edited
   workflow_dispatch:
   schedule:
     - cron: "*/30 * * * *"
