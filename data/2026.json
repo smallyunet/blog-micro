@@ -136,5 +136,51 @@
       "eyes": 0
     },
     "performed_via_github_app": null
+  },
+  {
+    "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/4649152650",
+    "html_url": "https://github.com/smallyunet/blog-micro/issues/1#issuecomment-4649152650",
+    "issue_url": "https://api.github.com/repos/smallyunet/blog-micro/issues/1",
+    "id": 4649152650,
+    "node_id": "IC_kwDOS0LypM8AAAABFRxwig",
+    "user": {
+      "login": "smallyunet",
+      "id": 20765689,
+      "node_id": "MDQ6VXNlcjIwNzY1Njg5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20765689?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/smallyunet",
+      "html_url": "https://github.com/smallyunet",
+      "followers_url": "https://api.github.com/users/smallyunet/followers",
+      "following_url": "https://api.github.com/users/smallyunet/following{/other_user}",
+      "gists_url": "https://api.github.com/users/smallyunet/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/smallyunet/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/smallyunet/subscriptions",
+      "organizations_url": "https://api.github.com/users/smallyunet/orgs",
+      "repos_url": "https://api.github.com/users/smallyunet/repos",
+      "events_url": "https://api.github.com/users/smallyunet/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/smallyunet/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "created_at": "2026-06-08T12:51:13Z",
+    "updated_at": "2026-06-08T12:51:13Z",
+    "body": "Trust Wallet 这么知名的钱包，仍然没有解析和处理 Base 链的 internal 交易。这会导致 internal 交易收到资产不会有消息通知，动态里也没有记录。比如从 Uniswap 到账就没有通知。\n\n去年只做过 1 个月的钱包开发，但恰好就负责这种交易记录的解析。\n\n",
+    "author_association": "OWNER",
+    "pin": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/4649152650/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "performed_via_github_app": null
   }
 ]
