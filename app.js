@@ -13,7 +13,6 @@ const els = {
   status: document.getElementById("status-text"),
   issueLink: document.getElementById("issue-link"),
   total: document.getElementById("total-count"),
-  search: document.getElementById("search-input"),
   loadingTemplate: document.getElementById("loading-template"),
 };
 
@@ -217,11 +216,7 @@ async function init() {
   }
 }
 
-els.search.addEventListener("input", () => {
-  state.query = els.search.value;
-  const comments = state.loaded.get(state.activeYear);
-  if (comments) renderItems(state.activeYear, comments);
-});
+
 
 els.timeline.addEventListener("click", (event) => {
   const link = event.target.closest('a[href^="#"]');

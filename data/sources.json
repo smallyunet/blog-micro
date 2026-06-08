@@ -37,6 +37,12 @@
       "owner": "smallyunet",
       "repo": "hexo-blog",
       "issue": 35
+    },
+    {
+      "year": 2026,
+      "owner": "smallyunet",
+      "repo": "blog-micro",
+      "issue": 1
     }
   ]
 }
