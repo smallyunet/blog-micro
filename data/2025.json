@@ -533,8 +533,8 @@
       "site_admin": false
     },
     "created_at": "2025-06-24T05:00:19Z",
-    "updated_at": "2025-06-24T05:00:19Z",
-    "body": "重新打开了微博的 issue，并且恢复了导航栏里的微博按钮，因为现在博客拆分为两个网站了：\n\n- smallyu.net\n- crazy.smallyu.net （疯狂版）\n\n在疯狂版上，我可以随心所欲发布任何想说的内容，应该没人会关注到。",
+    "updated_at": "2026-06-09T04:39:47Z",
+    "body": "重新打开了微博的 issue，并且恢复了导航栏里的微博按钮，因为现在博客拆分为两个网站了：\n\n- [smallyu.net](https://smallyu.net/)\n- [crazy.smallyu.net](https://crazy.smallyu.net/) （疯狂版）\n\n在疯狂版上，我可以随心所欲发布任何想说的内容，应该没人会关注到。",
     "author_association": "OWNER",
     "pin": null,
     "reactions": {
@@ -625,8 +625,8 @@
       "site_admin": false
     },
     "created_at": "2025-08-01T08:44:16Z",
-    "updated_at": "2025-08-01T08:44:16Z",
-    "body": "现在得维护两个博客，整的很麻烦，比如一篇文章有 typo，我得分别在两个博客里改。",
+    "updated_at": "2026-06-09T04:39:59Z",
+    "body": "现在得维护两个博客，整的很麻烦，比如一篇文章有 typo，得分别在两个博客里改。",
     "author_association": "OWNER",
     "pin": null,
     "reactions": {
