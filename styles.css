@@ -82,7 +82,8 @@ a:visited {
   box-shadow: none;
 }
 
-.brand {
+.brand,
+.brand:visited {
   color: #777;
   font-family: var(--font-serif);
   font-size: 20px;
@@ -94,7 +95,9 @@ a:visited {
 }
 
 .brand:hover,
-.brand:focus {
+.brand:focus,
+.brand:visited:hover,
+.brand:visited:focus {
   color: #333;
   text-decoration: none;
 }
@@ -139,7 +142,6 @@ a:visited {
 
 .nav-list {
   display: flex;
-  gap: 8px;
   font-size: 20px;
   list-style: none;
   margin: 0;
@@ -629,12 +631,15 @@ a:visited {
     border-color: #2a2f37;
   }
 
-  .brand {
+  .brand,
+  .brand:visited {
     color: #9aa4b2;
   }
 
   .brand:hover,
-  .brand:focus {
+  .brand:focus,
+  .brand:visited:hover,
+  .brand:visited:focus {
     color: #fff;
   }
 
