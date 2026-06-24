@@ -43,7 +43,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/4647974532",
@@ -89,7 +90,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/4648295581",
@@ -135,7 +137,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/4649152650",
@@ -181,7 +184,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/4686489606",
@@ -227,6 +231,7 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   }
 ]

@@ -43,7 +43,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2591678846",
@@ -89,7 +90,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2599813491",
@@ -135,7 +137,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2613720734",
@@ -181,7 +184,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2614033943",
@@ -227,7 +231,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2615645926",
@@ -273,7 +278,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2646106034",
@@ -319,7 +325,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2668487766",
@@ -365,7 +372,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2716157887",
@@ -411,7 +419,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2781196817",
@@ -457,7 +466,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2851125640",
@@ -503,7 +513,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/2998812656",
@@ -549,7 +560,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/3089207458",
@@ -595,7 +607,8 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   },
   {
     "url": "https://api.github.com/repos/smallyunet/blog-crazy/issues/comments/3143753408",
@@ -641,6 +654,7 @@
       "rocket": 0,
       "eyes": 0
     },
-    "performed_via_github_app": null
+    "performed_via_github_app": null,
+    "minimized": null
   }
 ]
