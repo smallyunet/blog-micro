@@ -280,5 +280,52 @@
     },
     "performed_via_github_app": null,
     "minimized": null
+  },
+  {
+    "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/4979295078",
+    "html_url": "https://github.com/smallyunet/blog-micro/issues/1#issuecomment-4979295078",
+    "issue_url": "https://api.github.com/repos/smallyunet/blog-micro/issues/1",
+    "id": 4979295078,
+    "node_id": "IC_kwDOS0LypM8AAAABKMoDZg",
+    "user": {
+      "login": "smallyunet",
+      "id": 20765689,
+      "node_id": "MDQ6VXNlcjIwNzY1Njg5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20765689?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/smallyunet",
+      "html_url": "https://github.com/smallyunet",
+      "followers_url": "https://api.github.com/users/smallyunet/followers",
+      "following_url": "https://api.github.com/users/smallyunet/following{/other_user}",
+      "gists_url": "https://api.github.com/users/smallyunet/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/smallyunet/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/smallyunet/subscriptions",
+      "organizations_url": "https://api.github.com/users/smallyunet/orgs",
+      "repos_url": "https://api.github.com/users/smallyunet/repos",
+      "events_url": "https://api.github.com/users/smallyunet/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/smallyunet/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "created_at": "2026-07-15T09:58:17Z",
+    "updated_at": "2026-07-15T09:58:17Z",
+    "body": "我发现自己天然看不起中文撸毛KOL，因为有两个雷点：中文、撸毛。\n\n但是我也不清楚为什么。他们大概率比我有钱、有人气、有影响力、有人“求”、过得好，但我依然觉得自己内心对他们充满鄙夷。",
+    "author_association": "OWNER",
+    "pin": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/4979295078/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "performed_via_github_app": null,
+    "minimized": null
   }
 ]
