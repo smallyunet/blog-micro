@@ -374,5 +374,52 @@
     },
     "performed_via_github_app": null,
     "minimized": null
+  },
+  {
+    "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/5014731946",
+    "html_url": "https://github.com/smallyunet/blog-micro/issues/1#issuecomment-5014731946",
+    "issue_url": "https://api.github.com/repos/smallyunet/blog-micro/issues/1",
+    "id": 5014731946,
+    "node_id": "IC_kwDOS0LypM8AAAABKua8qg",
+    "user": {
+      "login": "smallyunet",
+      "id": 20765689,
+      "node_id": "MDQ6VXNlcjIwNzY1Njg5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20765689?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/smallyunet",
+      "html_url": "https://github.com/smallyunet",
+      "followers_url": "https://api.github.com/users/smallyunet/followers",
+      "following_url": "https://api.github.com/users/smallyunet/following{/other_user}",
+      "gists_url": "https://api.github.com/users/smallyunet/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/smallyunet/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/smallyunet/subscriptions",
+      "organizations_url": "https://api.github.com/users/smallyunet/orgs",
+      "repos_url": "https://api.github.com/users/smallyunet/repos",
+      "events_url": "https://api.github.com/users/smallyunet/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/smallyunet/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "created_at": "2026-07-19T06:39:30Z",
+    "updated_at": "2026-07-19T06:39:30Z",
+    "body": "突然想起来一个小事。曾经有一个运营人员，给我们的项目反馈是 “太卡了”，没有任何更多的信息和细节。\n\n这样的描述真的太主观、太模糊了，作为技术人员根本无从下手。至少得说一下在什么设备上、访问哪个页面、网络状态如何、具体哪个组件、卡顿的现象是样式错位还是加载延迟或者别的什么。\n\n这不是在对非技术人员提过分的要求。你可以这么想，去大街上随便拉一个人过来，没有读过书、没有文化、没有学历、没有工作、没有职场经验、没有收入，随便一个人，是不是都能说得出 “太卡了” 这三个字？而作为一个混迹于职场、身处 web3 行业的资深牛马，竟然说出了是个人都能说出的话？你和 anybody 的区别在哪里？",
+    "author_association": "OWNER",
+    "pin": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/5014731946/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "performed_via_github_app": null,
+    "minimized": null
   }
 ]
