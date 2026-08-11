@@ -57,7 +57,7 @@ function renderMarkdown(markdown) {
   if (!window.marked) return markdown || "";
   if (!markdownConfigured) {
     marked.setOptions({
-      breaks: false,
+      breaks: true,
       gfm: true,
       headerIds: false,
       mangle: false,
