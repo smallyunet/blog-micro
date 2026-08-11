@@ -24,8 +24,8 @@ permissions:
   issues: read
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: sync-and-deploy-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   deploy:
