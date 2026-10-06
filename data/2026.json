@@ -985,5 +985,52 @@
     },
     "performed_via_github_app": null,
     "minimized": null
+  },
+  {
+    "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/6013899064",
+    "html_url": "https://github.com/smallyunet/blog-micro/issues/1#issuecomment-6013899064",
+    "issue_url": "https://api.github.com/repos/smallyunet/blog-micro/issues/1",
+    "id": 6013899064,
+    "node_id": "IC_kwDOS0LypM8AAAABZnTROA",
+    "user": {
+      "login": "smallyunet",
+      "id": 20765689,
+      "node_id": "MDQ6VXNlcjIwNzY1Njg5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20765689?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/smallyunet",
+      "html_url": "https://github.com/smallyunet",
+      "followers_url": "https://api.github.com/users/smallyunet/followers",
+      "following_url": "https://api.github.com/users/smallyunet/following{/other_user}",
+      "gists_url": "https://api.github.com/users/smallyunet/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/smallyunet/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/smallyunet/subscriptions",
+      "organizations_url": "https://api.github.com/users/smallyunet/orgs",
+      "repos_url": "https://api.github.com/users/smallyunet/repos",
+      "events_url": "https://api.github.com/users/smallyunet/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/smallyunet/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "created_at": "2026-10-06T10:01:39Z",
+    "updated_at": "2026-10-06T10:01:39Z",
+    "body": "AI 文章库中的文章是AI写的，但是文章的观点、立场、大纲、方向是我提出的，AI 只是帮助我往里面填充具体的细节和证据。所以我仍然觉得这些文章有分享出来的必要和价值，\n\n这就好像一部电影的导演，写剧本的编剧并不是他，出镜演戏的演员也不是他，拍摄和剪辑电影的工作人员也不是他。但是最终这部电影是导演的，你能说跟他没有关系吗？同样的道理，领导安排给你一项工作，你完成了，具体细节是你完成的，汇报结果给领导。难道这项工作不是领导的结果吗？\n\n所以这就像导演一样，我在指挥 AI 来写这些文章。我认为这是一种生产关系的变革。传统的电影导演，他有钱，他能用非常多的钱来雇一些真正的人来帮他做这些事情。那么到了科技发展的现在，我花钱让 AI 来帮我做一些事情，这些东西最终还是我的。就像我让 AI 写代码之后，代码还是我的，项目还是我的。你能说这些东西是AI的吗，对吧。",
+    "author_association": "OWNER",
+    "pin": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/smallyunet/blog-micro/issues/comments/6013899064/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "performed_via_github_app": null,
+    "minimized": null
   }
 ]
