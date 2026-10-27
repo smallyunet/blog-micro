@@ -1,9 +1,6 @@
 name: Sync and deploy
 
 on:
-  push:
-    branches:
-      - main
   issue_comment:
     types:
       - created
@@ -13,9 +10,7 @@ on:
     types:
       - opened
       - edited
-  workflow_dispatch:
-  schedule:
-    - cron: "*/30 * * * *"
+      - deleted
 
 permissions:
   contents: write
@@ -29,6 +24,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: ${{ !github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages

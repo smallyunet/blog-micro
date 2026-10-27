@@ -27,7 +27,7 @@ async function readEvent() {
 }
 
 function shouldSyncSource(source, event) {
-  if (!event || eventName !== "issue_comment") return true;
+  if (!event || !["issue_comment", "issues"].includes(eventName)) return true;
   const repo = event.repository?.name;
   const owner = event.repository?.owner?.login;
   const issue = event.issue?.number;
@@ -148,7 +148,9 @@ async function main() {
 
     let comments;
     try {
-      comments = await fetchEntries(source);
+      comments = eventName === "issues" && event?.action === "deleted"
+        ? []
+        : await fetchEntries(source);
     } catch (error) {
       if (isEventSource(source, event)) {
         throw error;

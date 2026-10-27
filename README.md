@@ -46,11 +46,13 @@ npm run sync
 
 ## 自动部署
 
-`.github/workflows/deploy.yml` 会在这些情况下运行：
+`.github/workflows/deploy.yml` 只在当前仓库发生以下事件时自动同步并部署：
 
-- push 到 `main`
-- 当前仓库 issue comment 创建、编辑、删除
-- 手动 `workflow_dispatch`
-- 每 30 分钟兜底轮询
+- issue comment 创建、编辑、删除
+- issue 创建、编辑、删除（包含作为微博展示的 issue 正文）
 
-注意：GitHub 的 `issue_comment` 事件只会触发 comment 所在仓库的 workflow。历史年份仍在 `hexo-blog`，所以旧仓库 issue 的更新主要依靠定时轮询；新年份放到 `blog-micro` 后可以接近实时更新。
+每次只同步事件对应的已配置 issue；其他年份保留现有数据。删除整个源 issue 时，会清空对应年份的数据。
+
+不再通过定时任务、push 或手动 Actions 触发发布。Pull request 评论不会触发部署。
+
+历史年份仍在 `hexo-blog`，保留现有静态数据，不再自动拉取；旧仓库的编辑和删除不会自动同步。需要手动全量同步时，可在本地运行 `npm run sync`。
